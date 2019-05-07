@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { FoodsService } from '../food/foods.service';
 
 @Component({
   selector: 'app-food-selection',
@@ -7,8 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoodSelectionComponent implements OnInit {
 
-  constructor() { }
+  @Output() orderParent = 'nothing yet';  // Parent Output data to child
+  items = '';
+  foodCat = '';
+  constructor(private foodsService: FoodsService) { }
 
-  ngOnInit() {}
+
+  onOrder(order) {
+
+    return this.orderParent = order;
+  }
+
+  getPurchase($event) {
+    this.items = $event;  // get data from child
+  }
+
+ngOnInit() {
+
+   this.foodsService.getFoodCat().subscribe(cat => this.foodCat = cat);
+}
 
 }

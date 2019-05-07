@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FoodsService } from '../../foods/food/foods.service';
 
 @Component({
   selector: 'app-food-menu',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoodMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private foodsService: FoodsService) { }
 
   ngOnInit() {}
+
+  onShowMainCourse() {
+
+    this.foodsService.setFoodCat('MeatKinds');
+  }
 
 }

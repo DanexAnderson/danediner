@@ -1,3 +1,36 @@
-<p>
-  food-selection works!
-</p>
+<ion-content>
+
+<div class='container mt-3'>
+
+<div class="class row col-12">
+
+<div class="mt-1 col-3 pr-5">
+<app-order-builder [orderChild] = "orderParent" (purchaseEvent)="getPurchase($event)"></app-order-builder>
+</div>
+
+<div class="row col-9">
+  <div class=" col-6 ">
+ <img src="https://i.ytimg.com/vi/zigTgCmsZGc/maxresdefault.jpg" class="img-thumbnail shadow" >
+<h4 class="text-center p-1 bg-warning "> Juicy Fried Chicken</h4>
+<button mat-raised-button color='warn' 
+class="float-right text-white btn shadow" (click)="onOrder('Juicy Fried Chicken')">Order</button>
+
+<span><h4 class="mt-5 pt-5">I was purchased => {{items}}</h4></span>
+  </div>
+
+  <div class="col-6 ">
+
+    <h4>The Current Menu Category is <span class='text-primary'>{{foodCat}} </span></h4>
+
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+</ion-content>

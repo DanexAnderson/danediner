@@ -1,0 +1,36 @@
+
+1. Forms Validation
+
+2. Share Component data  </
+
+3. Obseravables: Subject, behaviorSubject, Subscription
+
+4. Routing
+
+5. lazying loading and preloadingStrategy
+
+6. http request 
+
+7. auth gaurd 
+
+8. http intercept
+
+9. nodejs api
+
+10. mongoose model
+
+11. node jwt check-auth 
+
+12. mongoose CRUD with JWT token
+
+13. bcrypt authentication
+
+14. mat-dialog
+
+15. toast 
+
+16. State Management Ngrx
+
+17. PWA 
+
+18. GraphQL 
